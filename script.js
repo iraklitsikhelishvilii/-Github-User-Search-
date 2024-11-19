@@ -38,6 +38,7 @@ let contact_container_box_p3 = document.getElementById(
 let contact_container_box_p4 = document.getElementById(
   "contact_container_box_p4"
 );
+let header_p = document.getElementById("header_p");
 header_box_change.addEventListener("click", () => {
   body.classList.toggle("darker_background");
   header_h.classList.toggle("color_white");
