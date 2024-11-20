@@ -49,6 +49,7 @@ header_box_change.addEventListener("click", () => {
   header_h.classList.toggle("color_white");
   serch_box.classList.toggle("dark_background");
   serch.classList.toggle("dark_background");
+  serch.classList.toggle("color_white");
   section_contaiener.classList.toggle("dark_background");
   profile_box_h.classList.toggle("color_white");
   section_contaiener_p.classList.toggle("color_white");
