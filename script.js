@@ -39,6 +39,11 @@ let contact_container_box_p4 = document.getElementById(
   "contact_container_box_p4"
 );
 let header_p = document.getElementById("header_p");
+let header_img = document.getElementById("header_img");
+let contact_img1 = document.getElementById("contact_img1");
+let contact_img2 = document.getElementById("contact_img2");
+let contact_img4 = document.getElementById("contact_img4");
+
 header_box_change.addEventListener("click", () => {
   body.classList.toggle("darker_background");
   header_h.classList.toggle("color_white");
@@ -59,4 +64,20 @@ header_box_change.addEventListener("click", () => {
   contact_container_box_p2.classList.toggle("color_white");
   contact_container_box_p3.classList.toggle("color_white");
   contact_container_box_p4.classList.toggle("color_white");
+  header_p.classList.toggle("color_white");
+  header_h.classList.contains("color_white")
+    ? (header_img.src = "./photos/002-sun.svg")
+    : (header_img.src = "./photos/moon.svg");
+  header_h.classList.contains("color_white")
+    ? (header_p.textContent = "LIGHT")
+    : (header_p.textContent = "DARK");
+  header_h.classList.contains("color_white")
+    ? (contact_img1.src = "./photos/003-pinwhite1.svg")
+    : (contact_img1.src = "./photos/003-pin.svg");
+  header_h.classList.contains("color_white")
+    ? (contact_img2.src = "./photos/002-urlwhite.svg")
+    : (contact_img2.src = "./photos/002-url.svg");
+  header_h.classList.contains("color_white")
+    ? (contact_img4.src = "./photos/001-office-buildingwhite.svg")
+    : (contact_img4.src = "./photos/001-office-building.svg");
 });
