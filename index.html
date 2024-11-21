@@ -16,22 +16,26 @@
     </header>
     <section>
       <div id="serch_box" class="serch_box">
-        <div class="serch_box_contant">
-          <div class="serch_input_box">
-            <label for="serch"
-              ><img
-                class="serch_img_mobile"
-                src="./photos/Shape 2.svg"
-                alt="" /><img class="serch_img_tablet" src="./photos/lupa2.svg"
-            /></label>
-            <input
-              type="text"
-              id="serch"
-              placeholder="Search GitHub username…"
-            />
+        <form id="form">
+          <div class="serch_box_contant">
+            <div class="serch_input_box">
+              <label for="serch"
+                ><img
+                  class="serch_img_mobile"
+                  src="./photos/Shape 2.svg"
+                  alt="" /><img
+                  class="serch_img_tablet"
+                  src="./photos/lupa2.svg"
+              /></label>
+              <input
+                type="text"
+                id="serch"
+                placeholder="Search GitHub username…"
+              />
+            </div>
           </div>
-        </div>
-        <button class="serch_btn">Search</button>
+          <button class="serch_btn">Search</button>
+        </form>
       </div>
       <div id="section_contaiener" class="section_contaiener">
         <img class="out_img" src="./photos/profile_img_tablet.svg" alt="" />
@@ -107,29 +111,35 @@
             <div class="contact_container_1">
               <div class="contact_container_box">
                 <img id="contact_img1" src="./photos/003-pin.svg" alt="" />
-                <p id="contact_container_box_p" class="contact_container_box_p">
-                  San Francisco
-                </p>
+                <a
+                  class="contact_container_box_p"
+                  id="contact_container_box_p"
+                  href=""
+                >
+                  San Francisco</a
+                >
               </div>
               <div class="contact_container_box">
                 <img id="contact_img2" src="./photos/002-url.svg" alt="" />
-                <p
-                  id="contact_container_box_p2"
+                <a
                   class="contact_container_box_p"
+                  id="contact_container_box_p2"
+                  href=""
                 >
-                  https://github.blog
-                </p>
+                  https://github.blog</a
+                >
               </div>
             </div>
             <div class="contact_container_1">
               <div class="contact_container_box">
                 <img src="./photos/004-twitter.svg" alt="" />
-                <p
+                <a
+                  class="contact_container_box_p"
                   id="contact_container_box_p3"
-                  class="contact_container_box_p_unavailable"
+                  href=""
                 >
-                  Not Available
-                </p>
+                  Not Available</a
+                >
               </div>
               <div class="contact_container_box">
                 <img
@@ -137,12 +147,13 @@
                   src="./photos/001-office-building.svg"
                   alt=""
                 />
-                <p
-                  id="contact_container_box_p4"
+                <a
                   class="contact_container_box_p"
+                  id="contact_container_box_p4"
+                  href=""
                 >
-                  @github
-                </p>
+                  @github</a
+                >
               </div>
             </div>
           </div>
