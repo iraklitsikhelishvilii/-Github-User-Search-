@@ -10,15 +10,32 @@ let followers_container_box_number2 = document.getElementById(
 let followers_container_box_number3 = document.getElementById(
   "followers_container_box_number3"
 );
-let profile_img_tablet = document.getElementById("profile_img_tablet");
+let profile_img1 = document.getElementById("profile_img1");
+let profile_img2 = document.getElementById("profile_img2");
+let profile_img3 = document.getElementById("profile_img3");
 let section_contaiener_p = document.getElementById("section_contaiener_p");
 let profile_box_contant_p = document.getElementById("profile_box_contant_p");
-let contact_container_box_p = document.getElementsByTagName(
+let contact_container_box_p = document.getElementById(
   "contact_container_box_p"
 );
-
+let contact_container_box_p2 = document.getElementById(
+  "contact_container_box_p2"
+);
+let contact_container_box_p3 = document.getElementById(
+  "contact_container_box_p3"
+);
+let profile_box_contant_name_p = document.getElementById(
+  "profile_box_contant_name_p"
+);
+let not_found = document.getElementById("not_found");
+let serch_btn = document.getElementById("serch_btn");
 form.addEventListener("submit", (value) => {
   value.preventDefault();
+  let username2 = serch.value.trim();
+  if (username2 === "") {
+    alert("შეიყვანეთ სწორი სახელი!");
+    return;
+  }
   let username = serch.value;
   console.log(username);
   async function GetUsers() {
@@ -26,15 +43,39 @@ form.addEventListener("submit", (value) => {
       let Data = await fetch(`https://api.github.com/users/${username}`);
       let user = await Data.json();
       console.log(user);
+      if (!user.login) {
+        not_found.textContent = "No results";
+      } else {
+        not_found.textContent = "";
+      }
+      profile_img1.src = user.avatar_url;
+      profile_img2.src = user.avatar_url;
+      profile_img3.src = user.avatar_url;
       profile_box_h.textContent = user.login;
-      profile_img_tablet = user.avatar_url;
       followers_container_box_number.textContent = user.public_repos;
       followers_container_box_number2.textContent = user.followers;
       followers_container_box_number3.textContent = user.following;
-      section_contaiener_p.textContent = user.bio;
+
+      if (user.bio === null) {
+        section_contaiener_p.textContent = "This user has no bio";
+      } else {
+        section_contaiener_p.textContent = user.bio;
+      }
       profile_box_contant_p.textContent = user.created_at;
-      contact_container_box_p.textContent = user.location;
-      // contact_container_box_p.src = `https://www.google.com/search?q=${user.location}`;
+
+      if (user.location === null) {
+        contact_container_box_p.textContent = " Not Available";
+      } else {
+        contact_container_box_p.textContent = user.location;
+        contact_container_box_p.href = `https://www.google.com/search?q=${user.location}`;
+      }
+      contact_container_box_p2.href = user.html_url;
+      if (user.twitter_username === null) {
+        contact_container_box_p3.textContent = "Not Available";
+      } else {
+        contact_container_box_p3.textContent = user.twitter_username;
+      }
+      profile_box_contant_name_p.textContent = `id:${user.id}`;
     } catch (error) {
       console.error("სამწუხაროდ ლინკი არის დაზიანებული");
     }
