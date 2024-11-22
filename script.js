@@ -29,6 +29,7 @@ let profile_box_contant_name_p = document.getElementById(
 );
 let not_found = document.getElementById("not_found");
 let serch_btn = document.getElementById("serch_btn");
+let contact_img3 = document.getElementById("contact_img3");
 form.addEventListener("submit", (value) => {
   value.preventDefault();
   let username2 = serch.value.trim();
@@ -70,6 +71,7 @@ form.addEventListener("submit", (value) => {
         contact_container_box_p.href = `https://www.google.com/search?q=${user.location}`;
       }
       contact_container_box_p2.href = user.html_url;
+      contact_container_box_p4.href = user.html_url;
       if (user.twitter_username === null) {
         contact_container_box_p3.textContent = "Not Available";
       } else {
@@ -113,6 +115,7 @@ function toggleDarkMode(isDarkMode) {
     header_p.textContent = "LIGHT";
     contact_img1.src = "./photos/003-pinwhite1.svg";
     contact_img2.src = "./photos/002-urlwhite.svg";
+    contact_img3.src - "./photos/004-twitterwhite.svg";
     contact_img4.src = "./photos/001-office-buildingwhite.svg";
   } else {
     body.classList.remove("darker_background");
@@ -140,6 +143,7 @@ function toggleDarkMode(isDarkMode) {
     header_p.textContent = "DARK";
     contact_img1.src = "./photos/003-pin.svg";
     contact_img2.src = "./photos/002-url.svg";
+    contact_img3.src - "./photos/004-twitter.svg";
     contact_img4.src = "./photos/001-office-building.svg";
   }
 }

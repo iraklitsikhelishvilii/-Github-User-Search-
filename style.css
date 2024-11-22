@@ -150,6 +150,7 @@ input {
   align-items: center;
   justify-content: space-around;
   margin-top: 24px;
+  margin-left: 15px;
 }
 .followers_container_box {
   display: flex;
@@ -175,6 +176,7 @@ input {
   gap: 17px;
   padding-top: 24px;
   padding-bottom: 50px;
+  padding-left: 20px;
 }
 .contact_container_box {
   display: flex;
@@ -212,7 +214,6 @@ input {
 .out_img_box {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   max-width: 327px;
   width: 100%;
@@ -315,6 +316,7 @@ input {
     max-width: 494px;
     width: 100%;
     margin-top: 32px;
+    margin-left: 0px;
   }
   .followers_container_box_header {
     font-size: 13px;
@@ -333,6 +335,7 @@ input {
     width: 100%;
     padding-bottom: 40px;
     padding-top: 30px;
+    padding-left: 0px;
   }
   .contact_container_1 {
     display: flex;
@@ -349,6 +352,7 @@ input {
   .out_img_box {
     max-width: 573px;
     width: 100%;
+    align-items: center;
   }
   .header_box {
     max-width: 90px;
